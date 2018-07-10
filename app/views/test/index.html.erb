@@ -1,0 +1,10 @@
+<h3><%=@questions[:"1"][:question]%></h3>
+<%=form_tag test_test_path, method: :post, remote: true do%>
+<!-- <label></label> -->
+<%@questions[:"1"][:option].each do |option|%>
+<label><%=option%></label>
+<input type="radio" value="<%=option%>" name="answer"/><br/>
+<%end%>
+<%=submit_tag "Submit"%>
+<%end%>
+<div></div>
